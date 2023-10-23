@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  font-family: "Armata", sans-serif;
+  background-color: #2b2d42;
+}
+
+h1 {
+  text-align: center;
+}
+
+.movieList {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 170px;
+  font-size: large;
+  text-align: center;
+}
+
+.movieList img {
+  max-height: 400px;
+  box-shadow: 3px 3px rgba(133, 127, 127, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 10px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 5px 9px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.guess {
+  display: flex;
+  justify-content: center;
+  font-size: 70px;
+  gap: 20px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  background-color: #000;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#score {
+  color: #f8f32b;
+  background-color: #000;
+}
+
+#highScore {
+  color: #8d99ae;
+  font-weight: 900;
+  background-color: #000;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 90px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #2b2d42;
+  animation: appear 200ms ease-in 1;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-900px);
+  }
+}
+
+.imdbRatings {
+  display: flex;
+  justify-content: center;
+  background-color: #8d99ae;
+}
+
+.imdbPosters {
+  display: flex;
+  justify-content: space-evenly;
+  max-height: 400px;
+  width: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #8d99ae;
+}
+
+.movie-title {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.modal-content {
+  background-color: #8d99ae;
+  margin: auto;
+  padding: 50px;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+#imdbRating1,
+#imdbRating2 {
+  background-color: #8d99ae;
+  color: #f8f32b;
+}
+
+#imdbPoster1,
+#imdbPoster2 {
+  box-shadow: 3px 3px rgba(133, 127, 127, 0.15);
+  border-radius: 10px;
+}
+
+.ratingBuffer {
+  background-color: #8d99ae;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.close {
+  color: #f8f32b;
+  background-color: #8d99ae;
+  float: right;
+  font-size: 25px;
+  font-weight: bolder;
+  text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b2d42;
+  transition: opacity 0.75 visibility 0.75;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: url("./img/movie-reel.png");
+  animation: loading 3.75s ease infinite;
+}
+
+.barChart {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 3px 3px rgba(133, 127, 127, 0.15);
+  margin-top: 50px;
+  width: 500px;
+  margin-bottom: 30px;
+}
+
+.barChart #boxOfficeChart {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .movieList {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 50px;
+  }
+
+  .guess {
+    font-size: 30px;
+  }
+
+  .modal {
+    padding-top: 300px;
+  }
+
+  .imdbRatings {
+    gap: 6px;
+  }
+
+  .imdbPosters {
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+    width: auto;
+    padding: 50px;
+    gap: 30px;
+  }
+}
