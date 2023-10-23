@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Armata&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="guess">
+      Best:
+      <span id="highScore"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Score:
+      <span id="score"></span>
+    </div>
+    <div class="movieList"></div>
+
+    <div class="loader"></div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="imdbRatings">
+          <h2><span id="imdbRating1"></span></h2>
+          <div class="ratingBuffer">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+          <h2><span id="imdbRating2"></span></h2>
+        </div>
+        <div class="imdbPosters">
+          <img id="imdbPoster1" src="default_image_url" alt="Movie Poster 1" />
+          <img id="imdbPoster2" src="default_image_url" alt="Movie Poster 2" />
+        </div>
+
+        <span class="close" id="closeModal">Guess Again</span>
+      </div>
+    </div>
+    <div class="barChart">
+      <canvas id="boxOfficeChart" width="700" height="350"></canvas>
+    </div>
+    <script type="module" src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </body>
+</html>
