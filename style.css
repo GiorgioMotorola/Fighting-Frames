@@ -17,13 +17,49 @@ h1 {
 }
 
 .movieList img {
+  border-style: solid;
+  border-color: white;
+  border-width: thick;
   max-height: 400px;
-  box-shadow: 3px 3px rgba(133, 127, 127, 0.15);
   border-radius: 10px;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 10px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 5px 9px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.movieList img:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
 }
 
 .guess {
@@ -162,8 +198,11 @@ h1 {
 }
 
 .barChart {
-  display: block;
-  margin: 0 auto;
+  margin: 25%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
   box-shadow: 3px 3px rgba(133, 127, 127, 0.15);
   margin-top: 50px;
   width: 500px;
@@ -171,6 +210,11 @@ h1 {
 }
 
 .barChart #boxOfficeChart {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.barChart #imdbVotesChart {
   background-color: #ffffff;
   border-radius: 10px;
 }

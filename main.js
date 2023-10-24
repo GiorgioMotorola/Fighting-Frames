@@ -1,6 +1,6 @@
 import { imdbID } from "./imdbID.js";
 import { apiKey } from "./apiKey.js";
-import { createChart } from "./chart.js";
+import { createBoxOfficeChart, createImdbVotesChart } from "./chart.js";
 
 let score = 0;
 let movieBatch = [];
@@ -61,7 +61,8 @@ function compareMovies(movie1, movie2) {
   movieList.appendChild(movieInfo2);
 
   setTimeout(function () {
-    createChart(movie1, movie2);
+    createBoxOfficeChart(movie1, movie2);
+    createImdbVotesChart(movie1, movie2);
   }, 1350);
 }
 
@@ -84,16 +85,6 @@ function createMovieInfo(movie) {
 
   return movieInfo;
 }
-
-window.addEventListener("load", () => {
-  const loader = document.querySelector(".loader");
-  setTimeout(() => {
-    loader.classList.add("loader-hidden");
-    loader.addEventListener("transitionend", () => {
-      loader.style.display = "none";
-    });
-  }, 1400);
-});
 
 function saveScoreToLocalStorage() {
   localStorage.setItem("score", score.toString());
@@ -118,7 +109,6 @@ function updateHighScore() {
 
 getHighScoreFromLocalStorage();
 updateHighScore();
-
 function getScoreFromLocalStorage() {
   const storedScore = localStorage.getItem("score");
   if (storedScore) {
@@ -177,11 +167,18 @@ function closeAndReloadModal() {
   location.reload();
 }
 
-getScoreFromLocalStorage();
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  setTimeout(() => {
+    loader.classList.add("loader-hidden");
+    loader.addEventListener("transitionend", () => {
+      loader.style.display = "none";
+    });
+  }, 1400);
+});
 
+getScoreFromLocalStorage();
 const scoreElement = document.getElementById("score");
 scoreElement.textContent = score;
-
 window.addEventListener("load", getMovieBatch);
-
 window.localStorage.removeItem("score");
