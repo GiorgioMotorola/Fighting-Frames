@@ -11,7 +11,7 @@ h1 {
 .movieList {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 170px;
+  margin-top: 100px;
   font-size: large;
   text-align: center;
 }
@@ -105,7 +105,7 @@ h1 {
   }
 }
 
-.imdbRatings {
+.imdb-ratings {
   display: flex;
   justify-content: center;
   background-color: #8d99ae;
@@ -197,26 +197,33 @@ h1 {
   animation: loading 3.75s ease infinite;
 }
 
-.barChart {
-  margin: 25%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 30px;
-  box-shadow: 3px 3px rgba(133, 127, 127, 0.15);
-  margin-top: 50px;
-  width: 500px;
-  margin-bottom: 30px;
-}
-
-.barChart #boxOfficeChart {
-  background-color: #ffffff;
+canvas {
+  border: 3px solid #ffffff;
+  margin-top: 60px;
   border-radius: 10px;
 }
 
-.barChart #imdbVotesChart {
-  background-color: #ffffff;
-  border-radius: 10px;
+.box-office-chart-container {
+  height: 150px;
+  flex: 0 0 auto;
+  width: 45%;
+  font-weight: bolder;
+}
+
+.imdb-votes-chart-container {
+  height: 150px;
+  flex: 0 0 auto;
+  width: 45%;
+  font-weight: bolder;
+}
+
+.main-bar-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-bar-container > div {
+  padding: 0px 10px;
 }
 
 @keyframes loading {
@@ -244,7 +251,7 @@ h1 {
     padding-top: 300px;
   }
 
-  .imdbRatings {
+  .imdb-ratings {
     gap: 6px;
   }
 
@@ -255,5 +262,65 @@ h1 {
     width: auto;
     padding: 50px;
     gap: 30px;
+  }
+
+  canvas {
+    border: 3px solid #ffffff;
+    margin-top: 60px;
+    border-radius: 10px;
+  }
+
+  .box-office-chart-container {
+    height: 150px;
+    flex: 0 0 auto;
+    width: 45%;
+    font-weight: bolder;
+  }
+
+  .imdb-votes-chart-container {
+    height: 150px;
+    flex: 0 0 auto;
+    width: 45%;
+    font-weight: bolder;
+  }
+
+  .main-bar-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-bar-container > div {
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  canvas {
+    border: 3px solid #ffffff;
+    margin-top: 60px;
+    border-radius: 10px;
+  }
+
+  .box-office-chart-container {
+    height: 50px;
+    flex: 0 0 auto;
+    width: 30%;
+    font-weight: bolder;
+  }
+
+  .imdb-votes-chart-container {
+    height: 100px;
+    flex: 0 0 auto;
+    width: 30%;
+    font-weight: bolder;
+  }
+
+  .main-bar-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .main-bar-container > div {
+    padding: 0px 10px;
   }
 }

@@ -6,7 +6,7 @@ function createBoxOfficeChart(movie1, movie2) {
   const yValues = [boxOffice1, boxOffice2];
   const barColors = ["rgba(10, 135, 74, 0.5", "rgba(10, 131, 135, 0.5)"];
 
-  new Chart("boxOfficeChart", {
+  new Chart("box-office-chart", {
     type: "bar",
     data: {
       labels: xValues,
@@ -15,6 +15,11 @@ function createBoxOfficeChart(movie1, movie2) {
           backgroundColor: barColors,
           data: yValues,
           barThickness: 100,
+          backgroundColor: "rgba(248,243,43,0.2)",
+          borderColor: "rgba(248,243,43,1)",
+          borderWidth: 2,
+          hoverBackgroundColor: "rgba(248,243,43,0.4)",
+          hoverBorderColor: "rgba(248,243,43,1)",
         },
       ],
     },
@@ -25,6 +30,7 @@ function createBoxOfficeChart(movie1, movie2) {
       title: {
         display: true,
         text: "Box Office",
+        fontColor: "white",
       },
     },
   });
@@ -38,7 +44,7 @@ function createImdbVotesChart(movie1, movie2) {
   const yValues = [imdbVotes1, imdbVotes2];
   const barColors = ["rgba(10, 135, 74, 0.5", "rgba(10, 131, 135, 0.5)"];
 
-  new Chart("imdbVotesChart", {
+  new Chart("imdb-votes-chart", {
     type: "bar",
     data: {
       labels: xValues,
@@ -47,6 +53,11 @@ function createImdbVotesChart(movie1, movie2) {
           backgroundColor: barColors,
           data: yValues,
           barThickness: 100,
+          backgroundColor: "rgba(248,243,43,0.2)",
+          borderColor: "rgba(248,243,43,1)",
+          borderWidth: 2,
+          hoverBackgroundColor: "rgba(248,243,43,0.4)",
+          hoverBorderColor: "rgba(248,243,43,1)",
         },
       ],
     },
@@ -57,10 +68,10 @@ function createImdbVotesChart(movie1, movie2) {
       title: {
         display: true,
         text: "Number of Votes",
+        fontColor: "white",
       },
     },
   });
 }
 
-export { createBoxOfficeChart };
-export { createImdbVotesChart };
+export { createBoxOfficeChart, createImdbVotesChart };

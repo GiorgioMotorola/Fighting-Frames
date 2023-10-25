@@ -20,7 +20,7 @@
     <div class="loader"></div>
     <div id="myModal" class="modal">
       <div class="modal-content">
-        <div class="imdbRatings">
+        <div class="imdb-ratings">
           <h2><span id="imdbRating1"></span></h2>
           <div class="ratingBuffer">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -35,9 +35,13 @@
         <span class="close" id="closeModal">Guess Again</span>
       </div>
     </div>
-    <div class="barChart">
-      <canvas id="boxOfficeChart" width="700" height="350"></canvas>
-      <canvas id="imdbVotesChart" width="700" height="350"></canvas>
+    <div class="main-bar-container">
+      <div class="box-office-chart-container">
+        <canvas id="box-office-chart"></canvas>
+      </div>
+      <div class="imdb-votes-chart-container">
+        <canvas id="imdb-votes-chart"></canvas>
+      </div>
     </div>
     <script type="module" src="main.js"></script>
     <script type="module" src="chart.js"></script>
