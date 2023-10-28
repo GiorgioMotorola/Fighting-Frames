@@ -1,6 +1,6 @@
-import { imdbID } from "./imdbID.js";
-import { apiKey } from "./apiKey.js";
-import { createBoxOfficeChart, createImdbVotesChart } from "./chart.js";
+import { imdbID } from "./js/imdbID.js";
+import { apiKey } from "./js/apiKey.js";
+import { createBoxOfficeChart, createImdbVotesChart } from "./js/chart.js";
 
 let score = 0;
 let movieBatch = [];

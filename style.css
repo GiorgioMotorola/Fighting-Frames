@@ -1,3 +1,5 @@
+/*TODO: Modal guess again button is hard to get to on laptop screen, need to resize*/
+
 :root {
   --main-background-color: #2b2d42;
   --main-text-color: #ffffff;
@@ -33,7 +35,7 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 10px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 5px 9px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  transition: 0.5s;
+  transition: 0.6s;
 }
 
 .movieList img:hover {
