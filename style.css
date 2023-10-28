@@ -17,6 +17,14 @@ h1 {
   text-align: center;
 }
 
+#logo {
+  width: 110px;
+  height: 95px;
+  position: absolute;
+  top: -7px;
+  left: 0px;
+}
+
 .movieList {
   display: flex;
   justify-content: space-evenly;
@@ -90,7 +98,7 @@ h1 {
 .imdb-ratings {
   display: flex;
   justify-content: center;
-  background-color: var(--secondary-text-color);
+  background-color: black;
 }
 
 .imdbPosters {
@@ -100,7 +108,7 @@ h1 {
   width: auto;
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: var(--secondary-text-color);
+  background-color: black;
 }
 
 .movie-title {
@@ -110,7 +118,7 @@ h1 {
 }
 
 .modal-content {
-  background-color: var(--secondary-text-color);
+  background-color: black;
   margin: auto;
   padding: 50px;
   border: 1px solid white;
@@ -124,25 +132,29 @@ h1 {
 
 #imdbRating1,
 #imdbRating2 {
-  background-color: var(--secondary-text-color);
+  background-color: black;
   color: var(--highlight-color);
 }
 
 #imdbPoster1,
 #imdbPoster2 {
-  box-shadow: 3px 3px rgba(133, 127, 127, 0.15);
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 0px 5px,
+    rgba(255, 255, 255, 0.12) 0px -1px 15px,
+    rgba(255, 255, 255, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 7px 13px,
+    rgba(255, 255, 255, 0.09) 0px -3px 5px;
   border-radius: 10px;
 }
 
 .ratingBuffer {
-  background-color: var(--secondary-text-color);
+  background-color: black;
   font-size: 25px;
   font-weight: 700;
 }
 
 .close {
   color: var(--highlight-color);
-  background-color: var(--secondary-text-color);
+  background-color: black;
   float: right;
   font-size: 25px;
   font-weight: bolder;
@@ -218,6 +230,10 @@ canvas {
 }
 
 @media screen and (max-width: 1000px) {
+  #logo {
+    display: none;
+  }
+
   .movieList {
     display: flex;
     flex-direction: column;
