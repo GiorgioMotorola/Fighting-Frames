@@ -13,6 +13,18 @@
   background-color: var(--main-background-color);
 }
 
+body::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--highlight-color);
+}
+
 h1 {
   text-align: center;
 }
