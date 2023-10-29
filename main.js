@@ -104,7 +104,7 @@ function getHighScoreFromLocalStorage() {
 
 function updateHighScore() {
   const highScoreElement = document.getElementById("highScore");
-  highScoreElement.textContent = highScore;
+  highScoreElement.textContent = "Best: " + highScore;
 }
 
 getHighScoreFromLocalStorage();
@@ -125,9 +125,16 @@ function handleGuess(userGuess, rating1, rating2) {
 
   if (isCorrect) {
     score += 1;
+    resultMessage.textContent = "Correct!";
+    resultMessage.style.color = "green";
   } else {
     score = 0;
+    resultMessage.textContent = "Wrong!";
+    resultMessage.style.color = "red";
   }
+
+  const appendToModal = document.getElementById("right-wrong");
+  appendToModal.appendChild(resultMessage);
 
   saveScoreToLocalStorage();
 }
@@ -159,6 +166,16 @@ function openModal() {
   closeModalBtn.addEventListener("click", () => {
     closeAndReloadModal();
   });
+
+  closeModalBtn.addEventListener("click", () => {
+    closeAndReloadModal();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeAndReloadModal();
+    }
+  });
 }
 
 function closeAndReloadModal() {
@@ -178,7 +195,8 @@ window.addEventListener("load", () => {
 });
 
 getScoreFromLocalStorage();
+
 const scoreElement = document.getElementById("score");
-scoreElement.textContent = score;
+scoreElement.textContent = "Score: " + score;
 window.addEventListener("load", getMovieBatch);
 window.localStorage.removeItem("score");

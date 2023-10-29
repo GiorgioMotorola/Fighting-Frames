@@ -13,9 +13,7 @@
   </head>
   <body>
     <div class="guess">
-      <img src="img/logo.png" id="logo" alt="Fighting Frames Logo" />
-      Best:
-      <span id="highScore"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Score:
+      <span id="highScore"></span> FIGHTING FRAMES
       <span id="score"></span>
     </div>
     <div class="movieList"></div>
@@ -30,11 +28,11 @@
           </div>
           <h2><span id="imdbRating2"></span></h2>
         </div>
-        <div class="imdbPosters">
+        <div class="imdbPosters" id="idmbPosters">
           <img id="imdbPoster1" src="default_image_url" alt="Movie Poster 1" />
           <img id="imdbPoster2" src="default_image_url" alt="Movie Poster 2" />
         </div>
-
+        <div id="right-wrong"></div>
         <span class="close" id="closeModal">Guess Again</span>
       </div>
     </div>
@@ -46,6 +44,7 @@
         <canvas id="imdb-votes-chart"></canvas>
       </div>
     </div>
+
     <script type="module" src="main.js"></script>
     <script type="module" src="chart.js"></script>
 
