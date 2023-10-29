@@ -241,7 +241,7 @@ canvas {
   }
 
   .guess {
-    font-size: 30px;
+    font-size: 50px;
     margin-bottom: 150px;
   }
 
@@ -324,8 +324,8 @@ canvas {
   }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 900px) {
   .guess {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
