@@ -78,6 +78,13 @@ h1 {
   background-color: black;
 }
 
+.instruct {
+  text-align: center;
+  color: white;
+  margin-top: 25px;
+  font-size: 30px;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -254,6 +261,9 @@ canvas {
 
   .guess {
     font-size: 50px;
+  }
+
+  .instruct {
     margin-bottom: 150px;
   }
 
