@@ -1,6 +1,7 @@
-import { imdbID } from "./js/imdbID.js";
-import { apiKey } from "./js/apiKey.js";
-import { createBoxOfficeChart, createImdbVotesChart } from "./js/chart.js";
+import { imdbID } from "./imdbID.js";
+import { apiKey } from "./apiKey.js";
+import { createBoxOfficeChart, createImdbVotesChart } from "./chart.js";
+import { openModal, closeAndReloadModal } from "./modal.js";
 
 let score = 0;
 let movieBatch = [];
@@ -74,7 +75,7 @@ function createMovieInfo(movie) {
   moviePoster.src = movie.Poster;
   moviePoster.classList.add("movie-poster");
   moviePoster.addEventListener("click", () => {
-    openModal();
+    openModal(movieBatch);
   });
 
   const movieTitle = document.createElement("div");
@@ -86,13 +87,35 @@ function createMovieInfo(movie) {
   return movieInfo;
 }
 
-function saveScoreToLocalStorage() {
-  localStorage.setItem("score", score.toString());
+function handleGuess(userGuess, rating1, rating2) {
+  const resultMessage = document.createElement("div");
+  resultMessage.classList.add("result-message");
 
-  if (score > highScore) {
-    highScore = score;
-    localStorage.setItem("highScore", highScore.toString());
+  const correctAnswer = rating1 > rating2 ? 1 : 2;
+  const isCorrect = userGuess === correctAnswer;
+
+  if (isCorrect) {
+    score += 1;
+    resultMessage.textContent = "Correct!";
+    resultMessage.style.color = "green";
+  } else {
+    score = 0;
+    resultMessage.textContent = "Wrong!";
+    resultMessage.style.color = "red";
   }
+
+  setTimeout(function () {
+    const appendToModal = document.getElementById("right-wrong");
+    appendToModal.appendChild(resultMessage);
+
+    resultMessage.style.opacity = 0;
+
+    setTimeout(function () {
+      resultMessage.style.opacity = 1;
+    }, 1800);
+  }, 0);
+
+  saveScoreToLocalStorage();
 }
 
 function getHighScoreFromLocalStorage() {
@@ -115,74 +138,7 @@ function getScoreFromLocalStorage() {
     score = parseInt(storedScore, 10);
   }
 }
-
-function handleGuess(userGuess, rating1, rating2) {
-  const resultMessage = document.createElement("div");
-  resultMessage.classList.add("result-message");
-
-  const correctAnswer = rating1 > rating2 ? 1 : 2;
-  const isCorrect = userGuess === correctAnswer;
-
-  if (isCorrect) {
-    score += 1;
-    resultMessage.textContent = "Correct!";
-    resultMessage.style.color = "green";
-  } else {
-    score = 0;
-    resultMessage.textContent = "Wrong!";
-    resultMessage.style.color = "red";
-  }
-
-  const appendToModal = document.getElementById("right-wrong");
-  appendToModal.appendChild(resultMessage);
-
-  saveScoreToLocalStorage();
-}
-
-function openModal() {
-  var modal = document.getElementById("myModal");
-  var imdbRating1Element = document.getElementById("imdbRating1");
-  var imdbRating2Element = document.getElementById("imdbRating2");
-  var imdbPoster1Element = document.getElementById("imdbPoster1");
-  var imdbPoster2Element = document.getElementById("imdbPoster2");
-
-  const imdbRating1 = movieBatch[0].imdbRating;
-  const imdbRating2 = movieBatch[1].imdbRating;
-  imdbPoster1Element.src = movieBatch[0].Poster;
-  imdbPoster2Element.src = movieBatch[1].Poster;
-
-  imdbRating1Element.textContent = imdbRating1;
-  imdbRating2Element.textContent = imdbRating2;
-  imdbPoster1Element.textContent = imdbPoster1;
-  imdbPoster2Element.textContent = imdbPoster2;
-
-  modal.style.display = "block";
-
-  setTimeout(function () {
-    closeAndReloadModal();
-  }, 50000);
-
-  var closeModalBtn = document.getElementById("closeModal");
-  closeModalBtn.addEventListener("click", () => {
-    closeAndReloadModal();
-  });
-
-  closeModalBtn.addEventListener("click", () => {
-    closeAndReloadModal();
-  });
-
-  document.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      closeAndReloadModal();
-    }
-  });
-}
-
-function closeAndReloadModal() {
-  var modal = document.getElementById("myModal");
-  modal.style.display = "none";
-  location.reload();
-}
+/* local storage functions*/
 
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
