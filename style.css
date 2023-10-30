@@ -1,5 +1,3 @@
-/*TODO: Modal guess again button is hard to get to on laptop screen, need to resize*/
-
 :root {
   --main-background-color: #2b2d42;
   --main-text-color: #ffffff;
@@ -255,9 +253,8 @@ canvas {
 
 @media screen and (max-width: 1300px) {
   .movieList {
-    display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
     margin-top: 50px;
   }
 
@@ -270,50 +267,24 @@ canvas {
   }
 
   .modal {
-    padding-top: 300px;
+    padding-top: 150px;
   }
 
   .imdb-ratings {
-    gap: 6px;
+    gap: 10px;
   }
 
   .imdbPosters {
     display: flex;
     justify-content: space-between;
-    height: 250px;
-    width: auto;
-    padding: 50px;
-    gap: 30px;
-  }
-
-  canvas {
-    border: 3px solid #ffffff;
-    margin-top: 60px;
-    border-radius: 10px;
-  }
-
-  .box-office-chart-container {
-    height: 150px;
-    flex: 0 0 auto;
-    width: 45%;
-    font-weight: bolder;
-  }
-
-  .imdb-votes-chart-container {
-    height: 150px;
-    flex: 0 0 auto;
-    width: 45%;
-    font-weight: bolder;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
   }
 
   .main-bar-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 90px;
-  }
-
-  .main-bar-container > div {
-    padding: 0px 10px;
+    margin-top: 60px;
   }
 }
 
