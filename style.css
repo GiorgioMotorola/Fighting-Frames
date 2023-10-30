@@ -175,19 +175,18 @@ h1 {
 }
 
 .close {
-  color: var(--highlight-color);
+  color: var(--main-text-color);
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 25px;
   font-weight: bold;
-  text-shadow: 0 0 3px #000000, 0 0 5px #ffffff;
   cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #f8f32b;
   text-decoration: none;
   cursor: pointer;
 }
