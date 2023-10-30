@@ -118,6 +118,15 @@ function handleGuess(userGuess, rating1, rating2) {
   saveScoreToLocalStorage();
 }
 
+function saveScoreToLocalStorage() {
+  localStorage.setItem("score", score.toString());
+
+  if (score > highScore) {
+    highScore = score;
+    localStorage.setItem("highScore", highScore.toString());
+  }
+}
+
 function getHighScoreFromLocalStorage() {
   const storedHighScore = localStorage.getItem("highScore");
   if (storedHighScore) {
