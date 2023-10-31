@@ -115,8 +115,8 @@ h1 {
   justify-content: space-evenly;
   max-height: 400px;
   width: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   background-color: black;
 }
 
