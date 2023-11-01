@@ -260,7 +260,7 @@ h1 {
   color: var(--main-text-color);
   background-color: var(--secondary-text-color);
   padding: 18px;
-  margin-top: 70px;
+  margin-top: 45px;
   border-radius: 15px;
   cursor: pointer;
 }
