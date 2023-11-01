@@ -176,13 +176,19 @@ h1 {
 
 .close {
   color: var(--main-text-color);
+  background-color: black;
   position: absolute;
   top: 35px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 19px;
   cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid black;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
 }
 
 .close:hover,
@@ -190,6 +196,14 @@ h1 {
   color: #f8f32b;
   text-decoration: none;
   cursor: pointer;
+  transition-delay: 0.1s;
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 0 0 5px var(--highlight-color);
+  text-shadow: 0 0 5px var(--highlight-color);
+}
+
+.close::after {
+  content: "X";
 }
 
 .loader {
@@ -215,33 +229,53 @@ h1 {
   animation: loading 3.75s ease infinite;
 }
 
-canvas {
-  border: 3px solid #ffffff;
-  margin-top: 60px;
-  border-radius: 10px;
-}
-
-.box-office-chart-container {
-  height: 150px;
-  flex: 0 0 auto;
-  width: 45%;
-  font-weight: bolder;
-}
-
-.imdb-votes-chart-container {
-  height: 150px;
-  flex: 0 0 auto;
-  width: 45%;
-  font-weight: bolder;
-}
-
 .main-bar-container {
   display: flex;
   justify-content: space-around;
+  margin-top: 100px;
+  flex-wrap: wrap;
 }
 
-.main-bar-container > div {
-  padding: 0px 10px;
+.box-office-chart-container,
+.imdb-votes-chart-container {
+  width: 30%;
+  max-width: 30%;
+  border-style: solid;
+  border-color: white;
+  border-radius: 8px;
+}
+
+.box-office-chart,
+.imdb-votes-chart {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  top: 0px;
+  right: 0px;
+}
+
+#toggleChartsButton {
+  color: var(--main-text-color);
+  background-color: var(--secondary-text-color);
+  padding: 18px;
+  margin-top: 70px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#toggleChartsButton:hover {
+  color: #f8f32b;
+  text-decoration: none;
+  cursor: pointer;
+  transition-delay: 0.1s;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0 0 5px var(--highlight-color);
+  text-shadow: 0 0 5px var(--highlight-color);
 }
 
 @keyframes loading {
@@ -253,7 +287,9 @@ canvas {
   }
 }
 
-@media screen and (max-width: 1300px) {
+/* media */
+
+@media screen and (max-width: 1360px) {
   .movieList {
     flex-direction: column;
     gap: 20px;
@@ -285,44 +321,26 @@ canvas {
     gap: 20px;
   }
 
-  .main-bar-container {
-    margin-top: 60px;
-  }
-}
-
-@media screen and (min-width: 1360px) {
-  canvas {
-    border: 3px solid #ffffff;
-    margin-top: 60px;
-    border-radius: 10px;
-  }
-
-  .box-office-chart-container {
-    height: 100px;
-    flex: 0 0 auto;
-    width: 30%;
-    font-weight: bolder;
-  }
-
+  .box-office-chart-container,
   .imdb-votes-chart-container {
-    height: 100px;
-    flex: 0 0 auto;
-    width: 30%;
-    font-weight: bolder;
-  }
-
-  .main-bar-container {
-    margin-top: 100px;
-  }
-
-  .main-bar-container > div {
-    padding: 0px 10px;
+    width: 50%;
+    max-width: 50%;
   }
 }
 
 @media screen and (max-width: 900px) {
   .guess {
     font-size: 30px;
+  }
+
+  .main-bar-container {
+    flex-direction: column;
+  }
+
+  .box-office-chart-container,
+  .imdb-votes-chart-container {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -341,21 +359,10 @@ canvas {
     max-height: 200px;
   }
 
-  .main-bar-container {
-    flex-direction: column;
-  }
-
-  .main-bar-container > div {
-    width: 95%;
-  }
-
-  .box-office-chart {
-    height: 200px;
-  }
-
+  .box-office-chart-container,
   .imdb-votes-chart-container {
-    height: 200px;
-    margin-top: 250px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .modal-content {

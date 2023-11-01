@@ -35,15 +35,20 @@
           <img id="imdbPoster2" src="default_image_url" alt="Movie Poster 2" />
         </div>
         <div id="right-wrong" style="background-color: black"></div>
-        <span class="close" id="closeModal">X</span>
+        <div class="close-container">
+          <span class="close" id="closeModal"></span>
+        </div>
       </div>
+    </div>
+    <div class="btn-container">
+      <button id="toggleChartsButton">MOVIE DETAILS</button>
     </div>
     <div class="main-bar-container">
       <div class="box-office-chart-container">
-        <canvas id="box-office-chart"></canvas>
+        <canvas id="box-office-chart" style="display: none"></canvas>
       </div>
       <div class="imdb-votes-chart-container">
-        <canvas id="imdb-votes-chart"></canvas>
+        <canvas id="imdb-votes-chart" style="display: none"></canvas>
       </div>
     </div>
     <script src="./js/modal.js"></script>
