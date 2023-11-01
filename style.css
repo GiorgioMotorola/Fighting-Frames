@@ -240,9 +240,6 @@ h1 {
 .imdb-votes-chart-container {
   width: 30%;
   max-width: 30%;
-  border-style: solid;
-  border-color: white;
-  border-radius: 8px;
 }
 
 .box-office-chart,
