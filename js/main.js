@@ -2,6 +2,7 @@ import { imdbID } from "./imdbID.js";
 import { apiKey } from "./apiKey.js";
 import { createBoxOfficeChart, createImdbVotesChart } from "./chart.js";
 import { openModal, closeAndReloadModal } from "./modal.js";
+import { btn } from "./movieDetails.js";
 
 let score = 0;
 let movieBatch = [];
@@ -128,7 +129,6 @@ function saveScoreToLocalStorage() {
     localStorage.setItem("highScore", highScore.toString());
   }
 }
-console.log(highScore);
 
 function getHighScoreFromLocalStorage() {
   const storedHighScore = localStorage.getItem("highScore");
@@ -162,27 +162,8 @@ window.addEventListener("load", () => {
   }, 1400);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleChartsButton = document.getElementById("toggleChartsButton");
-  const mainBarContainer = document.querySelector(".main-bar-container");
-  const boxOfficeChartContainer = document.getElementById("box-office-chart");
-  const imdbVotesChartContainer = document.getElementById("imdb-votes-chart");
-
-  toggleChartsButton.addEventListener("click", function () {
-    if (boxOfficeChartContainer.style.display === "none") {
-      boxOfficeChartContainer.style.display = "block";
-      imdbVotesChartContainer.style.display = "block";
-      mainBarContainer.style.height = "auto";
-    } else {
-      boxOfficeChartContainer.style.display = "none";
-      imdbVotesChartContainer.style.display = "none";
-      mainBarContainer.style.height = "0";
-    }
-  });
-});
-
+btn();
 getScoreFromLocalStorage();
-
 const scoreElement = document.getElementById("score");
 scoreElement.textContent = "Score: " + score;
 window.addEventListener("load", getMovieBatch);
