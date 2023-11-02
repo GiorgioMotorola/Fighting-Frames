@@ -268,6 +268,9 @@ canvas {
   margin-top: 45px;
   border-radius: 15px;
   cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 15px;
 }
 
 #toggleChartsButton:hover {
