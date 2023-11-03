@@ -22,27 +22,28 @@ async function getRandomMovie() {
   try {
     const res = await fetch(url);
     const data = await res.json();
+
     return data;
   } catch (error) {
     console.error("lol", error);
   }
 }
 
-function getMovieBatch() {
+async function getMovieBatch() {
   movieBatch = [];
-  const promises = [];
+  let movie1, movie2;
 
-  for (let i = 0; i < 2; i++) {
-    const promise = getRandomMovie().then((movie) => {
-      movieBatch.push(movie);
-    });
+  while (true) {
+    movie1 = await getRandomMovie();
+    movie2 = await getRandomMovie();
 
-    promises.push(promise);
+    if (movie1.imdbRating !== movie2.imdbRating) {
+      break;
+    }
   }
 
-  Promise.all(promises).then(() => {
-    compareMovies(movieBatch[0], movieBatch[1]);
-  });
+  movieBatch.push(movie1, movie2);
+  compareMovies(movie1, movie2);
 }
 
 function compareMovies(movie1, movie2) {
