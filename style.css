@@ -1,5 +1,5 @@
 :root {
-  --main-background-color: rgb(43, 45, 66);
+  --main-background-color: #2b2d42;
   --main-text-color: #d8e3d8;
   --secondary-text-color: #8d99ae;
   --highlight-color: #f8f32b;
@@ -79,8 +79,8 @@ h1 {
 .instruct {
   text-align: center;
   color: white;
-  margin-top: 25px;
-  font-size: 30px;
+  margin-top: 20px;
+  font-size: 18px;
 }
 
 .modal {
@@ -293,28 +293,34 @@ canvas {
 
 #details-container-1,
 #details-container-2 {
+  box-shadow: rgba(0, 0, 0, 0.656) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 10px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 5px 9px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 30px;
+  padding: 25px;
   border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  background-color: rgb(0, 0, 0);
 }
 
 .movie-detail-description {
   font-weight: bold;
   color: var(--secondary-text-color);
+  background-color: rgb(0, 0, 0);
 }
 
 #movie-title-1,
 #movie-title-2 {
-  color: var(--highlight-color);
+  color: #003185;
   font-weight: 900;
+  font-size: 20px;
   border: 1.5px solid rgb(255, 255, 255);
-  background-color: rgb(156, 156, 156);
-  margin-left: 35%;
-  margin-right: 35%;
+  background-color: white;
+  margin-bottom: 10px;
   border-radius: 5px;
-  margin-bottom: 5px;
-}
-
-#movie-title-2 {
-  margin-top: 50px;
 }
 
 #movie-plot-1,
@@ -338,6 +344,7 @@ canvas {
 #movie-awards-1,
 #movie-awards-2 {
   color: #fffafa;
+  background-color: rgb(0, 0, 0);
 }
 
 @keyframes loading {
@@ -403,6 +410,17 @@ canvas {
   .imdb-votes-chart-container {
     width: 100%;
     max-width: 100%;
+  }
+
+  #details-container-1,
+  #details-container-2 {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  #movie-title-1,
+  #movie-title-2 {
+    font-size: 18px;
   }
 }
 

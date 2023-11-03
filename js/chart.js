@@ -4,7 +4,7 @@ function createBoxOfficeChart(movie1, movie2) {
 
   const xValues = [movie1.Title, movie2.Title];
   const yValues = [boxOffice1, boxOffice2];
-  const barColors = ["rgba(43, 45, 66, 0.5)", "rgba(43, 45, 66, 0.5)"];
+  const barColors = ["rgba(43, 45, 66, 0.7)", "rgba(43, 45, 66, 0.7)"];
 
   new Chart("box-office-chart", {
     type: "bar",
@@ -26,7 +26,10 @@ function createBoxOfficeChart(movie1, movie2) {
       title: {
         display: true,
         text: "Box Office",
-        fontColor: "white",
+        fontColor: "black",
+        font: {
+          color: "black",
+        },
       },
     },
   });
@@ -38,7 +41,7 @@ function createImdbVotesChart(movie1, movie2) {
 
   const xValues = [movie1.Title, movie2.Title];
   const yValues = [imdbVotes1, imdbVotes2];
-  const barColors = ["rgba(43, 45, 66, 0.5)", "rgba(43, 45, 66, 0.5)"];
+  const barColors = ["rgba(43, 45, 66, 0.7)", "rgba(43, 45, 66, 0.7)"];
 
   new Chart("imdb-votes-chart", {
     type: "bar",
@@ -60,7 +63,7 @@ function createImdbVotesChart(movie1, movie2) {
       title: {
         display: true,
         text: "Number of Votes",
-        fontColor: "white",
+        fontColor: "black",
       },
     },
   });
