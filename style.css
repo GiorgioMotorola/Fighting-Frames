@@ -291,6 +291,11 @@ canvas {
   gap: 5px;
 }
 
+#details-container-1,
+#details-container-2 {
+  border-style: solid;
+}
+
 .movie-detail-description {
   font-weight: bold;
   color: var(--secondary-text-color);
@@ -301,10 +306,11 @@ canvas {
   color: var(--highlight-color);
   font-weight: 900;
   border: 1.5px solid rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(156, 156, 156);
   margin-left: 35%;
   margin-right: 35%;
-  border-radius: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
 #movie-title-2 {

@@ -26,6 +26,8 @@ function btn() {
     const movieActors2 = document.getElementById("movie-actors-2");
     const movieAwards1 = document.getElementById("movie-awards-1");
     const movieAwards2 = document.getElementById("movie-awards-2");
+    const detailsContainer1 = document.getElementById("details-container-1");
+    const detailsContainer2 = document.getElementById("details-container-2");
 
     toggleChartsButton.addEventListener("click", function () {
       if (boxOfficeChartContainer.style.display === "none") {
@@ -53,6 +55,8 @@ function btn() {
         movieActors2.style.display = "block";
         movieAwards1.style.display = "block";
         movieAwards2.style.display = "block";
+        detailsContainer1.style.display = "block";
+        detailsContainer2.style.display = "block";
         mainBarContainer.style.height = "auto";
       } else {
         boxOfficeChartContainer.style.display = "none";
@@ -79,6 +83,8 @@ function btn() {
         movieActors2.style.display = "none";
         movieAwards1.style.display = "none";
         movieAwards2.style.display = "none";
+        detailsContainer1.style.display = "none";
+        detailsContainer2.style.display = "none";
         mainBarContainer.style.height = "0";
       }
     });
