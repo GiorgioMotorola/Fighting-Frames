@@ -377,6 +377,11 @@ canvas {
     padding-top: 150px;
   }
 
+  #imdbPoster1,
+  #imdbPoster2 {
+    margin-left: -35px;
+  }
+
   .imdb-ratings {
     gap: 10px;
   }
@@ -456,6 +461,11 @@ canvas {
     width: auto;
     background-color: black;
     gap: 100px;
+  }
+
+  #imdbPoster1,
+  #imdbPoster2 {
+    margin-left: 0px;
   }
 
   .close {
