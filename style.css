@@ -271,6 +271,7 @@ canvas {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 15px;
+  margin-bottom: 80px;
 }
 
 #toggleChartsButton:hover {
@@ -281,6 +282,56 @@ canvas {
   border: 1px solid rgb(255, 255, 255);
   box-shadow: 0 0 5px var(--highlight-color);
   text-shadow: 0 0 5px var(--highlight-color);
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+}
+
+.movie-detail-description {
+  font-weight: bold;
+  color: var(--secondary-text-color);
+}
+
+#movie-title-1,
+#movie-title-2 {
+  color: var(--highlight-color);
+  font-weight: 900;
+  border: 1.5px solid rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  margin-left: 35%;
+  margin-right: 35%;
+  border-radius: 10px;
+}
+
+#movie-title-2 {
+  margin-top: 50px;
+}
+
+#movie-plot-1,
+#movie-plot-2,
+#movie-year-1,
+#movie-year-2,
+#movie-rated-1,
+#movie-rated-2,
+#movie-released-1,
+#movie-released-2,
+#movie-runtime-1,
+#movie-runtime-2,
+#movie-genre-1,
+#movie-genre-2,
+#movie-director-1,
+#movie-director-2,
+#movie-writer-1,
+#movie-writer-2,
+#movie-actors-1,
+#movie-actors-2,
+#movie-awards-1,
+#movie-awards-2 {
+  color: #fffafa;
 }
 
 @keyframes loading {
@@ -400,5 +451,11 @@ canvas {
   #imdbRating1,
   #imdbRating2 {
     font-size: 25px;
+  }
+
+  #movie-title-1,
+  #movie-title-2 {
+    margin-left: 20%;
+    margin-right: 20%;
   }
 }
