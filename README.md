@@ -1,10 +1,11 @@
 # Fighting Frames
 
-Made using The Open Movie Database (OMDB API => https://www.omdbapi.com/), this web game asks you to select the highest user rating between two movies on IMDb.
+Made using The Open Movie Database ([OMDb API](https://www.omdbapi.com/)), this web game asks you to select the highest user rating between two movies on IMDb.
 
 This is deployed using Netlify to hide my API Key which gave me the opportunity to share it with my mom.
 <br>
-https://ff.mweatherford.rocks/
+<br>
+[Click me to play!](https://ff.mweatherford.rocks/)
 <br>
 <br>
 
@@ -24,7 +25,7 @@ _Used Chart.js to diplay bar charts of Box Office Earnings and IMDb Votes within
 
 **3. Retrieve data from a third-party API and use it to display something within your app.**
 <br>
-_Retriving data from the OMDB API. (https://www.omdbapi.com/)_
+_Retriving data from the ([OMDb API.](https://www.omdbapi.com/))_
 
 # Wire Frame
 
