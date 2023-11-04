@@ -8,12 +8,13 @@ https://ff.mweatherford.rocks/
 <br>
 <br>
 
-<h2>Wire Frame</h2>
+# Wire Frame
+
 ![Home Page View](./img/wireframe-imgs/home-page-view.png)
 <br>
-![Home Page View](./img/wireframe-imgs/home-page-view-mobile.png)
+![Home Page View(Mobile)](./img/wireframe-imgs/home-page-view-mobile.png)
 <br>
-![Home Page View](./img/wireframe-imgs/modal-view.png)
+![Modal View](./img/wireframe-imgs/modal-view.png)
 <br>
-![Home Page View](./img/wireframe-imgs/movie-details-view.png)
+![Movie Details View](./img/wireframe-imgs/movie-details-view.png)
 <br>
