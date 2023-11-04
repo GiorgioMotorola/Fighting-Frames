@@ -3,9 +3,12 @@
 Made using The Open Movie Database (OMDB API), this web game asks you to select the highest user rating between two movies on IMDb.
 
 This is deployed using Netlify to hide my API Key which gave me the opportunity to share it with my mom.
-
+<br>
 https://ff.mweatherford.rocks/
 <br>
+<br>
+
+<h2>Wire Frame</h2>
 ![Home Page View](./img/wireframe-imgs/home-page-view.png)
 <br>
 ![Home Page View](./img/wireframe-imgs/home-page-view-mobile.png)
