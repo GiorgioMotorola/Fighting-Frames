@@ -16,7 +16,7 @@ This project runs out of the box with Live Server installed. If you do not have 
 
 <img src='./img/wireframe-imgs/home-page-view.png' width='1000'>
 <br>
-<img src='./img/wireframe-imgs/home-page-view-mobile.png' width='800'>
+<img src='./img/wireframe-imgs/home-page-view-mobile.png' width='1000'>
 <br>
 <img src='./img/wireframe-imgs/modal-view.png' width='1000'>
 <br>
