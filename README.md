@@ -8,13 +8,17 @@ https://ff.mweatherford.rocks/
 <br>
 <br>
 
+# How To Run
+
+This project runs out of the box with Live Server installed. If you do not have Live Server, it can be installed by navigating to VS Code Extentions. You can also see it in action by clicking the link above. Have fun!!!
+
 # Wire Frame
 
-![Home Page View](./img/wireframe-imgs/home-page-view.png)
+<img src='./img/wireframe-imgs/home-page-view.png' width='1000'>
 <br>
-![Home Page View(Mobile)](./img/wireframe-imgs/home-page-view-mobile.png)
+<img src='./img/wireframe-imgs/home-page-view-mobile.png' width='800'>
 <br>
-![Modal View](./img/wireframe-imgs/modal-view.png)
+<img src='./img/wireframe-imgs/modal-view.png' width='1000'>
 <br>
-![Movie Details View](./img/wireframe-imgs/movie-details-view.png)
+<img src='./img/wireframe-imgs/movie-details-view.png' width='1000'>
 <br>
