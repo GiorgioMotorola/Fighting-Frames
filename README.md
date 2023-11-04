@@ -11,7 +11,7 @@ This is deployed using Netlify to hide my API Key which gave me the opportunity 
 
 # How To Run
 
-This project runs out of the box with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) installed. If you do not have Live Server, it can be installed by navigating to VS Code Extentions. You can also see it in action by clicking the link above. Have fun!!!
+This project runs out of the box with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) installed. If you do not have Live Server, it can be installed by navigating to VS Code Extentions. You can also see the project in action by [Clicking here.](https://ff.mweatherford.rocks/). Have fun!!!
 
 # Requirements Met
 
