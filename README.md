@@ -13,6 +13,12 @@ This is deployed using Netlify to hide my API Key which gave me the opportunity 
 
 This project runs out of the box with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) installed. If you do not have Live Server, it can be installed by navigating to VS Code Extentions. You can also see the project in action by [Clicking here.](https://ff.mweatherford.rocks/). Have fun!!!
 
+You will also have to get your own API Key at [OMDb API.](https://www.omdbapi.com/) Once you have a key, add a js file called _apiKey.js_ and add the following:
+
+```javascript
+export const apiKey = "https://www.omdbapi.com/?apikey=your-api-key";
+```
+
 # Requirements Met
 
 **1. Use arrays, objects, sets or maps to store and retrieve information that is displayed in your app.**
