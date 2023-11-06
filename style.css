@@ -493,3 +493,17 @@ canvas {
     margin-right: 20%;
   }
 }
+@media screen and (max-width: 780px) {
+  .movieList img {
+    box-shadow: none;
+    transition: none;
+  }
+
+  #toggleChartsButton:hover {
+    transition-delay: none;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    color: black;
+  }
+}
