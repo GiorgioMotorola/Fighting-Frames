@@ -225,7 +225,7 @@ h1 {
 }
 
 .loader::after {
-  content: url("./img/movie-reel.png");
+  content: url("./img/movie-reel-3.png");
   animation: loading 3.75s ease infinite;
 }
 
@@ -492,8 +492,12 @@ canvas {
     margin-left: 20%;
     margin-right: 20%;
   }
-}
-@media screen and (max-width: 780px) {
+
+  .loader::after {
+    content: url("./img/movie-reel-3-resize.png");
+    animation: loading 3.75s ease infinite;
+  }
+
   .movieList img {
     box-shadow: none;
     transition: none;
