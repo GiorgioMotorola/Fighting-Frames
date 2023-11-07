@@ -510,4 +510,9 @@ canvas {
     text-shadow: none;
     color: black;
   }
+
+  .loader {
+    width: 100vw;
+    height: 85vh;
+  }
 }
