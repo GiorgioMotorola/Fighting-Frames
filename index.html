@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <title>Fighting Frames</title>
+    <meta
+      name="description"
+      content="This game returns two random movies and the user attempts to guess which of the two movies has the highest imdb user rating"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,34 +18,55 @@
   </head>
   <body>
     <div class="guess">
-      <span id="highScore"></span> FIGHTING FRAMES
-      <span id="score"></span>
+      <span id="highScore" alt="Your high score"></span> FIGHTING FRAMES
+      <span id="score" alt="Your current score"></span>
     </div>
-    <div class="instruct">Which movie has the highest IMDB user rating?</div>
+    <div class="instruct" alt="Game Instructions">
+      Which movie has the highest IMDB user rating?
+    </div>
     <div class="movieList"></div>
-    <div class="loader"></div>
-    <div id="myModal" class="modal">
+    <div class="loader" aria-hidden="true"></div>
+    <div
+      id="myModal"
+      class="modal"
+      aria-hidden="true"
+      aria-labelledby="modalTitle"
+    >
       <div class="modal-content">
         <div class="imdb-ratings">
-          <h2><span id="imdbRating1"></span></h2>
+          <h2><span id="imdbRating1" alt="IMDB Rating 1"></span></h2>
           <div class="ratingBuffer">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </div>
-          <h2><span id="imdbRating2"></span></h2>
+          <h2><span id="imdbRating2" alt="IMDB Rating 2"></span></h2>
         </div>
-        <div class="imdbPosters" id="idmbPosters">
-          <img id="imdbPoster1" src="default_image_url" alt="Movie Poster 1" />
-          <img id="imdbPoster2" src="default_image_url" alt="Movie Poster 2" />
+        <div class="imdbPosters" id="idmbPosters" alt="Movie Posters">
+          <img
+            id="imdbPoster1"
+            src="default_image_url"
+            alt="Random Movie Poster One"
+          />
+          <img
+            id="imdbPoster2"
+            src="default_image_url"
+            alt="Random Movie Poster Two"
+          />
         </div>
         <div id="right-wrong" style="background-color: black"></div>
         <div class="close-container">
-          <span class="close" id="closeModal"></span>
+          <span class="close" id="closeModal" aria-hidden="true"></span>
         </div>
       </div>
     </div>
 
     <div class="btn-container">
-      <button id="toggleChartsButton">MOVIE DETAILS</button>
+      <button
+        id="toggleChartsButton"
+        tabindex="0"
+        aria-label="Toggle Movie Details"
+      >
+        MOVIE DETAILS
+      </button>
     </div>
     <div class="movie-details">
       <div
@@ -49,22 +74,50 @@
         id="details-container-1"
         style="display: none"
       >
-        <div id="movie-title-1" style="display: none"></div>
+        <div id="movie-title-1" style="display: none" alt="Movie Title 1"></div>
         <div
           class="movie-plot-content"
           id="movie-plot-1"
           style="display: none"
         ></div>
-        <div id="movie-year-1" style="display: none"></div>
-        <div id="movie-rated-1" style="display: none"></div>
+        <div id="movie-year-1" style="display: none" alt="Movie Year 1"></div>
+        <div
+          id="movie-rated-1"
+          style="display: none"
+          alt="Movie Rating 1"
+        ></div>
 
-        <div id="movie-released-1" style="display: none"></div>
-        <div id="movie-runtime-1" style="display: none"></div>
-        <div id="movie-genre-1" style="display: none"></div>
-        <div id="movie-director-1" style="display: none"></div>
-        <div id="movie-writer-1" style="display: none"></div>
-        <div id="movie-actors-1" style="display: none"></div>
-        <div id="movie-awards-1" style="display: none"></div>
+        <div
+          id="movie-released-1"
+          style="display: none"
+          alt="Movie Released 1"
+        ></div>
+        <div
+          id="movie-runtime-1"
+          style="display: none"
+          alt="Movie Runtime 1"
+        ></div>
+        <div id="movie-genre-1" style="display: none" alt="Movie Genre 1"></div>
+        <div
+          id="movie-director-1"
+          style="display: none"
+          alt="Movie Director 1"
+        ></div>
+        <div
+          id="movie-writer-1"
+          style="display: none"
+          alt="Movie Writer 1"
+        ></div>
+        <div
+          id="movie-actors-1"
+          style="display: none"
+          alt="Movie Actors 1"
+        ></div>
+        <div
+          id="movie-awards-1"
+          style="display: none"
+          alt="Movie Awards 1"
+        ></div>
       </div>
       <!-- separated -->
       <div
@@ -72,31 +125,67 @@
         id="details-container-2"
         style="display: none"
       >
-        <div id="movie-title-2" style="display: none"></div>
+        <div id="movie-title-2" style="display: none" alt="Movie Title 2"></div>
         <div
           class="movie-plot-content"
           id="movie-plot-2"
           style="display: none"
         ></div>
-        <div id="movie-year-2" style="display: none"></div>
-        <div id="movie-rated-2" style="display: none"></div>
-        <div id="movie-released-2" style="display: none"></div>
-        <div id="movie-runtime-2" style="display: none"></div>
-        <div id="movie-genre-2" style="display: none"></div>
-        <div id="movie-director-2" style="display: none"></div>
-        <div id="movie-writer-2" style="display: none"></div>
-        <div id="movie-actors-2" style="display: none"></div>
-        <div id="movie-awards-2" style="display: none"></div>
+        <div id="movie-year-2" style="display: none" alt="Movie Year 2"></div>
+        <div
+          id="movie-rated-2"
+          style="display: none"
+          alt="Movie Rating 2"
+        ></div>
+        <div
+          id="movie-released-2"
+          style="display: none"
+          alt="Movie Released 2"
+        ></div>
+        <div
+          id="movie-runtime-2"
+          style="display: none"
+          alt="Movie Runtime 2"
+        ></div>
+        <div id="movie-genre-2" style="display: none" alt="Movie Genre 2"></div>
+        <div
+          id="movie-director-2"
+          style="display: none"
+          alt="Movie Director 2"
+        ></div>
+        <div
+          id="movie-writer-2"
+          style="display: none"
+          alt="Movie Writer 2"
+        ></div>
+        <div
+          id="movie-actors-2"
+          style="display: none"
+          alt="Movie Actors 2"
+        ></div>
+        <div
+          id="movie-awards-2"
+          style="display: none"
+          alt="Movie Awards 2"
+        ></div>
       </div>
     </div>
 
     <div class="movie-details-container"></div>
     <div class="main-bar-container">
       <div class="box-office-chart-container">
-        <canvas id="box-office-chart" style="display: none"></canvas>
+        <canvas
+          id="box-office-chart"
+          style="display: none"
+          aria-hidden="true"
+        ></canvas>
       </div>
       <div class="imdb-votes-chart-container">
-        <canvas id="imdb-votes-chart" style="display: none"></canvas>
+        <canvas
+          id="imdb-votes-chart"
+          style="display: none"
+          aria-hidden="true"
+        ></canvas>
       </div>
     </div>
 
