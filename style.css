@@ -57,7 +57,7 @@ h1 {
 .guess {
   display: flex;
   justify-content: space-between;
-  font-size: 70px;
+  font-size: 60px;
   gap: 20px;
   margin-bottom: 10px;
   color: var(--main-text-color);
@@ -78,9 +78,9 @@ h1 {
 
 .instruct {
   text-align: center;
-  color: white;
+  color: #ebebeb;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 48px;
 }
 
 .modal {
