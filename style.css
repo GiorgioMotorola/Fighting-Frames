@@ -324,12 +324,13 @@ canvas {
   text-decoration: none;
   cursor: pointer;
   transition-delay: 0.1s;
-  border: 1px solid rgb(255, 255, 255);
-  box-shadow: 0 0 5px var(--highlight-color);
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 0 0 5px var(--movie-details-color);
   bottom: 1.5%;
-  width: 35%;
+  width: 24%;
   border-radius: 0px;
   font-size: 20px;
+  font-weight: 600;
   animation: none;
   background-color: var(--secondary-text-color);
   background-image: none;
