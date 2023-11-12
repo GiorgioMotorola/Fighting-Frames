@@ -1,6 +1,5 @@
 :root {
   --main-background-color: #2b2d42;
-  /* --main-background-color: #5fa084; */
   --main-text-color: #d8e3d8;
   --secondary-text-color: #8d99ae;
   --highlight-color: #f8f32b;
@@ -70,12 +69,14 @@ h1 {
 #score {
   color: var(--highlight-color);
   background-color: black;
+  margin-right: 1%;
 }
 
 #highScore {
   color: var(--secondary-text-color);
   font-weight: 900;
   background-color: black;
+  margin-left: 1%;
 }
 
 .instruct {
