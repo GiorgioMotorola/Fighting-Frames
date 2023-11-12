@@ -282,26 +282,20 @@ canvas {
 }
 
 #toggleChartsButton {
-  color: var(--main-text-color);
-  background-color: var(--secondary-text-color);
-  padding: 18px;
-  margin-top: 15px;
-  border-radius: 15%;
+  border-radius: 75%;
   cursor: pointer;
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 30px;
   position: fixed;
   bottom: 15px;
   right: 10px;
-  width: 100px;
-  transition-property: width, bottom, font-size, border-radius;
+  width: 75px;
+  height: 75px;
+  transition-property: width, bottom, font-size, border-radius, background-image;
   transition-duration: 0.2s;
   transition-delay: 0.2s;
-  border: 3px solid rgb(0, 0, 0);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   animation: bounce 1s ease-in-out;
+  background-image: url(img/Reel-icon-resize.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 #toggleChartsButton:hover .emoji {
@@ -335,6 +329,8 @@ canvas {
   border-radius: 0px;
   font-size: 20px;
   animation: none;
+  background-color: var(--secondary-text-color);
+  background-image: none;
 }
 
 #toggleChartsButton:hover:before {
