@@ -8,8 +8,6 @@ function toggleCharts(buttonId) {
     const plotContainer2 = document.getElementById("movie-plot-2");
     const titleContainer1 = document.getElementById("movie-title-1");
     const titleContainer2 = document.getElementById("movie-title-2");
-    const yearContainer1 = document.getElementById("movie-year-1");
-    const yearContainer2 = document.getElementById("movie-year-2");
     const movieRated1 = document.getElementById("movie-rated-1");
     const movieRated2 = document.getElementById("movie-rated-2");
     const movieReleased1 = document.getElementById("movie-released-1");
@@ -47,8 +45,6 @@ function toggleCharts(buttonId) {
         plotContainer2,
         titleContainer1,
         titleContainer2,
-        yearContainer1,
-        yearContainer2,
         movieRated1,
         movieRated2,
         movieReleased1,
@@ -81,8 +77,6 @@ function movieDetailText(movie1, movie2) {
   const moviePlot2 = document.getElementById("movie-plot-2");
   const movieTitle1 = document.getElementById("movie-title-1");
   const movieTitle2 = document.getElementById("movie-title-2");
-  const movieYear1 = document.getElementById("movie-year-1");
-  const movieYear2 = document.getElementById("movie-year-2");
   const movieRated1 = document.getElementById("movie-rated-1");
   const movieRated2 = document.getElementById("movie-rated-2");
   const movieReleased1 = document.getElementById("movie-released-1");
@@ -107,11 +101,6 @@ function movieDetailText(movie1, movie2) {
     "<span class='movie-detail-description'>PLOT:&nbsp;</span> " + movie1.Plot;
   moviePlot2.innerHTML =
     "<span class='movie-detail-description'>PLOT:&nbsp;</span> " + movie2.Plot;
-
-  movieYear1.innerHTML =
-    "<span class='movie-detail-description'>YEAR:&nbsp;</span> " + movie1.Year;
-  movieYear2.innerHTML =
-    "<span class='movie-detail-description'>YEAR:&nbsp;</span> " + movie2.Year;
 
   movieRated1.innerHTML =
     "<span class='movie-detail-description'>RATED:&nbsp;</span> " +
