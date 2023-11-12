@@ -569,32 +569,60 @@ canvas {
     transition: none;
   }
 
-  #toggleChartsButton {
+  #toggleChartsButton-mobile {
     display: none;
   }
 
-  #toggleChartsButton-mobile {
-    display: block;
-    color: var(--main-text-color);
-    background-color: var(--secondary-text-color);
-    padding: 18px;
-    margin-top: 15px;
-    border-radius: 5%;
+  #toggleChartsButton {
+    border-radius: 75%;
     cursor: pointer;
-    color: rgb(0, 0, 0);
-    font-weight: 800;
-    font-size: 15px;
-    bottom: 15px;
-    right: 10px;
-    width: 30%px;
-    border: 3px solid rgb(0, 0, 0);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    /* animation: bounce 1s ease-in-out; */
+    /* position: relative;
+    bottom: 15px; */
+    /* right: 10px; */
+    width: 75px;
+    height: 75px;
+    margin-top: 25px;
+    transition-property: width, bottom, font-size, border-radius,
+      background-image;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
+    border: 1px solid var(--main-background-color);
+    animation: bounce 1s ease-in-out;
+    background-image: url(img/Reel-icon-resize.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    animation: bounce 1s ease-in-out;
   }
 
-  /* @keyframes bounce {
+  #toggleChartsButton:hover {
+    border-radius: 75%;
+    cursor: pointer;
+    /* position: relative;
+    bottom: 15px;
+    right: 10px; */
+    width: 60px;
+    height: 60px;
+    margin-top: 25px;
+    transition-property: width, bottom, font-size, border-radius,
+      background-image;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
+    border: none;
+    animation: bounce 1s ease-in-out;
+    background-image: url(img/Reel-icon-resize.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    box-shadow: 0 0 5px var(--main-background-color);
+    animation: bounce 1s ease-in-out;
+  }
+
+  #toggleChartsButton:hover:before {
+    content: "";
+    opacity: 0;
+    animation: fadeIn 0.1s ease-in-out 0.3s forwards;
+  }
+
+  @keyframes bounce {
     0%,
     20%,
     50%,
@@ -608,7 +636,7 @@ canvas {
     60% {
       transform: translateY(-15px);
     }
-  } */
+  }
 
   .loader {
     width: 100vw;
