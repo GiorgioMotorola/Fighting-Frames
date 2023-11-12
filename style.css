@@ -292,6 +292,7 @@ canvas {
   transition-property: width, bottom, font-size, border-radius, background-image;
   transition-duration: 0.2s;
   transition-delay: 0.2s;
+  border: 1px solid var(--main-background-color);
   animation: bounce 1s ease-in-out;
   background-image: url(img/Reel-icon-resize.png);
   background-repeat: no-repeat;
