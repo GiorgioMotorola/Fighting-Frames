@@ -1,6 +1,6 @@
 :root {
   --main-background-color: #2b2d42;
-  --main-text-color: #d8e3d8;
+  --main-text-color: #ebebeb;
   --secondary-text-color: #8d99ae;
   --highlight-color: #f8f32b;
   --movie-details-color: #ff0e00;
@@ -125,8 +125,9 @@ h1 {
 
 .movie-title {
   color: var(--main-text-color);
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 20px;
 }
 
 .modal-content {
