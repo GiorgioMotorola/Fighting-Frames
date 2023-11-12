@@ -2,7 +2,7 @@ import { imdbID } from "./imdbID.js";
 import { apiKey } from "./apiKey.js";
 import { createBoxOfficeChart, createImdbVotesChart } from "./chart.js";
 import { openModal, closeAndReloadModal } from "./modal.js";
-import { btn, movieDetailText } from "./movieDetails.js";
+import { movieDetailText, toggleCharts } from "./movieDetails.js";
 
 let score = 0;
 let movieBatch = [];
@@ -167,7 +167,9 @@ window.addEventListener("load", () => {
   }, 1400);
 });
 
-btn();
+toggleCharts("toggleChartsButton");
+toggleCharts("toggleChartsButton-mobile");
+
 getScoreFromLocalStorage();
 const scoreElement = document.getElementById("score");
 scoreElement.textContent = "Score: " + score;

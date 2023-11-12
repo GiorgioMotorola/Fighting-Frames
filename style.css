@@ -1,8 +1,10 @@
 :root {
   --main-background-color: #2b2d42;
+  /* --main-background-color: #5fa084; */
   --main-text-color: #d8e3d8;
   --secondary-text-color: #8d99ae;
   --highlight-color: #f8f32b;
+  --movie-details-color: #ff0e00;
 }
 
 * {
@@ -239,6 +241,7 @@ canvas {
   margin-top: 100px;
   flex-wrap: wrap;
   gap: 30px;
+  margin-bottom: 70px;
 }
 
 .box-office-chart-container,
@@ -261,27 +264,92 @@ canvas {
   right: 0px;
 }
 
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
 #toggleChartsButton {
   color: var(--main-text-color);
   background-color: var(--secondary-text-color);
   padding: 18px;
-  margin-top: 45px;
-  border-radius: 15px;
+  margin-top: 15px;
+  border-radius: 15%;
   cursor: pointer;
   color: rgb(0, 0, 0);
   font-weight: 800;
-  font-size: 15px;
-  margin-bottom: 80px;
+  font-size: 30px;
+  position: fixed;
+  bottom: 15px;
+  right: 10px;
+  width: 100px;
+  transition-property: width, bottom, font-size, border-radius;
+  transition-duration: 0.2s;
+  transition-delay: 0.2s;
+  border: 3px solid rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  animation: bounce 1s ease-in-out;
+}
+
+#toggleChartsButton:hover .emoji {
+  opacity: 0;
+}
+
+#toggleChartsButton .emoji {
+  background-color: var(--secondary-text-color);
+  color: var(--main-background-color);
+}
+
+#toggleChartsButton:hover:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 #toggleChartsButton:hover {
-  color: #f8f32b;
+  color: black;
   text-decoration: none;
   cursor: pointer;
   transition-delay: 0.1s;
   border: 1px solid rgb(255, 255, 255);
   box-shadow: 0 0 5px var(--highlight-color);
-  text-shadow: 0 0 5px var(--highlight-color);
+  bottom: 0px;
+  width: 40%;
+  border-radius: 0px;
+  font-size: 20px;
+  animation: none;
+}
+
+#toggleChartsButton:hover:before {
+  content: "Click for Movie Details";
+  opacity: 0;
+  animation: fadeIn 0.1s ease-in-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+#toggleChartsButton-mobile {
+  display: none;
 }
 
 .movie-details {
@@ -356,7 +424,7 @@ canvas {
   }
 }
 
-/* media */
+/* -------MEDIA SCREEN AND -- BELOW------- */
 
 @media screen and (max-width: 1360px) {
   .movieList {
@@ -503,12 +571,28 @@ canvas {
     transition: none;
   }
 
-  #toggleChartsButton:hover {
-    transition-delay: none;
-    border: none;
-    box-shadow: none;
-    text-shadow: none;
-    color: black;
+  #toggleChartsButton {
+    display: none;
+  }
+
+  #toggleChartsButton-mobile {
+    display: block;
+    color: var(--main-text-color);
+    background-color: var(--secondary-text-color);
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 5%;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-size: 15px;
+    bottom: 15px;
+    right: 10px;
+    width: 30%px;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
 
   .loader {
@@ -516,3 +600,5 @@ canvas {
     height: 85vh;
   }
 }
+
+/* -------MEDIA SCREEN AND -- ABOVE------- */

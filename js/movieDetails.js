@@ -1,6 +1,6 @@
-function btn() {
+function toggleCharts(buttonId) {
   document.addEventListener("DOMContentLoaded", function () {
-    const toggleChartsButton = document.getElementById("toggleChartsButton");
+    const toggleChartsButton = document.getElementById(buttonId);
     const mainBarContainer = document.querySelector(".main-bar-container");
     const boxOfficeChartContainer = document.getElementById("box-office-chart");
     const imdbVotesChartContainer = document.getElementById("imdb-votes-chart");
@@ -31,63 +31,48 @@ function btn() {
 
     toggleChartsButton.addEventListener("click", function () {
       if (boxOfficeChartContainer.style.display === "none") {
-        boxOfficeChartContainer.style.display = "block";
-        imdbVotesChartContainer.style.display = "block";
-        plotContainer1.style.display = "block";
-        plotContainer2.style.display = "block";
-        titleContainer1.style.display = "block";
-        titleContainer2.style.display = "block";
-        yearContainer1.style.display = "block";
-        yearContainer2.style.display = "block";
-        movieRated1.style.display = "block";
-        movieRated2.style.display = "block";
-        movieReleased1.style.display = "block";
-        movieReleased2.style.display = "block";
-        movieRuntime1.style.display = "block";
-        movieRuntime2.style.display = "block";
-        movieGenre1.style.display = "block";
-        movieGenre2.style.display = "block";
-        movieDirector1.style.display = "block";
-        movieDirector2.style.display = "block";
-        movieWriter1.style.display = "block";
-        movieWriter2.style.display = "block";
-        movieActors1.style.display = "block";
-        movieActors2.style.display = "block";
-        movieAwards1.style.display = "block";
-        movieAwards2.style.display = "block";
-        detailsContainer1.style.display = "block";
-        detailsContainer2.style.display = "block";
+        setDisplay("block");
         mainBarContainer.style.height = "auto";
       } else {
-        boxOfficeChartContainer.style.display = "none";
-        imdbVotesChartContainer.style.display = "none";
-        plotContainer1.style.display = "none";
-        plotContainer2.style.display = "none";
-        titleContainer1.style.display = "none";
-        titleContainer2.style.display = "none";
-        yearContainer1.style.display = "none";
-        yearContainer2.style.display = "none";
-        movieRated1.style.display = "none";
-        movieRated2.style.display = "none";
-        movieReleased1.style.display = "none";
-        movieReleased2.style.display = "none";
-        movieRuntime1.style.display = "none";
-        movieRuntime2.style.display = "none";
-        movieGenre1.style.display = "none";
-        movieGenre2.style.display = "none";
-        movieDirector1.style.display = "none";
-        movieDirector2.style.display = "none";
-        movieWriter1.style.display = "none";
-        movieWriter2.style.display = "none";
-        movieActors1.style.display = "none";
-        movieActors2.style.display = "none";
-        movieAwards1.style.display = "none";
-        movieAwards2.style.display = "none";
-        detailsContainer1.style.display = "none";
-        detailsContainer2.style.display = "none";
+        setDisplay("none");
         mainBarContainer.style.height = "0";
       }
     });
+
+    function setDisplay(displayValue) {
+      const elementsToDisplay = [
+        boxOfficeChartContainer,
+        imdbVotesChartContainer,
+        plotContainer1,
+        plotContainer2,
+        titleContainer1,
+        titleContainer2,
+        yearContainer1,
+        yearContainer2,
+        movieRated1,
+        movieRated2,
+        movieReleased1,
+        movieReleased2,
+        movieRuntime1,
+        movieRuntime2,
+        movieGenre1,
+        movieGenre2,
+        movieDirector1,
+        movieDirector2,
+        movieWriter1,
+        movieWriter2,
+        movieActors1,
+        movieActors2,
+        movieAwards1,
+        movieAwards2,
+        detailsContainer1,
+        detailsContainer2,
+      ];
+
+      elementsToDisplay.forEach((element) => {
+        element.style.display = displayValue;
+      });
+    }
   });
 }
 
@@ -185,4 +170,4 @@ function movieDetailText(movie1, movie2) {
     movie2.Awards;
 }
 
-export { btn, movieDetailText };
+export { movieDetailText, toggleCharts };
