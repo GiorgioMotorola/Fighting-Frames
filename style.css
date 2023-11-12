@@ -359,9 +359,9 @@ canvas {
 
 #details-container-1,
 #details-container-2 {
-  box-shadow: rgba(0, 0, 0, 0.656) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 10px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 5px 9px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(1, 1, 1, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.361) 0px -3px 0px inset;
   margin-left: 25%;
   margin-right: 25%;
   margin-top: 30px;
